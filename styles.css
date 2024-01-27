@@ -3,3 +3,7 @@ body {
     background: wheat;
     text-align: center;
 }
+
+a {
+    text-decoration: none;
+}
