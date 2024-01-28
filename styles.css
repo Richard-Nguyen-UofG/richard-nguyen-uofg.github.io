@@ -1,7 +1,6 @@
 body {
     margin: 0;
     background: wheat;
-    text-align: center;
 }
 
 a {
@@ -15,5 +14,6 @@ a {
 
 p {
     color: brown;
+    text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
