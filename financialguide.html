@@ -1,3 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .toc {
+            background-color: #34495e;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .toc h2 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .toc ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .toc ul li {
+            margin-bottom: 10px;
+        }
+        .toc ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .toc ul li a:hover {
+            color: #f39c12;
+        }
+        .toc ul li ul {
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+        .toc ul li ul li {
+            margin-bottom: 5px;
+        }
+        .content {
+            padding: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            color: #2c3e50;
+        }
+        h3 {
+            color: #2c3e50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .cat-meme {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cat-meme img {
+            max-width: 100%;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: relative;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .read-more {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .read-more-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Financial Guide</h1>
+        <p>By RN, last updated 06 Jan 2024</p>
+    </header>
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#chapter1">Chapter 1: Introduction</a>
+                <ul>
+                    <li><a href="#preface">Preface</a></li>
+                    <li><a href="#tldr">TLDR Priority Waterfall</a></li>
+                    <li><a href="#why-investing">Why is Investing Important?</a></li>
+                </ul>
+            </li>
+            <!-- Add other chapters and sub-chapters here -->
+        </ul>
+    </div>
+    <div class="content">
+        <section id="chapter1">
+            <h2>Chapter 1: Introduction</h2>
+            <section id="preface">
+                <h3>Preface</h3>
+                <p>This guide is primarily focused on what to do with the budget you’ve allocated toward paying off debts or saving toward some goal (e.g., a car or house). Why and what you should be prioritizing, accounts to be investing in, investment options, how to get financial advice, etc.</p>
+                <p><span class="read-more-toggle" id="preface-toggle">Read more...</span></p>
+                <div class="read-more-content" id="preface-content">
+                    <p>I do not discuss how much you should allocate toward this budget since it is very situation-dependent. Creating and managing a budget is important, but outside the scope of this guide, but here is a helpful resource if you need guidance. This guide also does not go into some topics (e.g., how taxes work), but I’ll make additions if there is enough interest.</p>
+                    <p>No recommendations or endorsements of any specific investment are given. I will be discussing types of investments (e.g., GICs), example options, pros and cons, best practices, and in what situations you would want to choose one over the other (based on time horizon, risk tolerance, etc.). However, I will be sharing what I personally do since I think it is only fair for you to hear what I am doing when it is my “neck on the line”. All details and figures are accurate as of the time of writing but may change in the future.</p>
+                    <p>Always open to hearing any suggestions or feedback, and answering any questions :)</p>
+                    <p>I wasn’t sure how to make some sections entertaining, so you get cat memes. I wish y’all the best in your financial journey! Yes, I like brackets too much.</p>
+                </div>
+            </section>
+            <section id="tldr">
+                <h3>TLDR Priority Waterfall</h3>
+                <p>There is a general order you should follow with extra money:</p>
+                <ol>
+                    <li>Build a $1,000 emergency fund</li>
+                    <li>Pay off high-interest debt (e.g., credit cards, payday loans, etc.)</li>
+                    <li>Contribute enough to your employer’s retirement plan to get the full match</li>
+                    <li>Build a 3–6 month emergency fund</li>
+                    <li>Pay off moderate interest debt (e.g., student loans, personal loans, etc.)</li>
+                    <li>Contribute the maximum to your tax-advantaged retirement accounts (TFSA, RRSP, etc.)</li>
+                    <li>Save for other goals (e.g., travel, house, car, etc.)</li>
+                    <li>Pay off low-interest debt (e.g., mortgage)</li>
+                    <li>Invest in taxable investment accounts</li>
+                </ol>
+            </section>
+            <section id="why-investing">
+                <h3>Why is Investing Important?</h3>
+                <p>The most important rule of investing is to start early. Even if you are only able to contribute a small amount, compound interest will work in your favor. Compound interest is the eighth wonder of the world, as Albert Einstein famously said.</p>
+                <p>Investing allows you to grow your wealth over time, outpacing inflation. Inflation reduces the purchasing power of money over time, so it's essential to invest in assets that provide a return higher than the inflation rate.</p>
+            </section>
+        </section>
+        <!-- Add other chapters and sections here -->
+    </div>
+    <script>
+        // JavaScript for toggling read more content
+        document.querySelectorAll('.read-more-toggle').forEach(function(element) {
+            element.addEventListener('click', function() {
+                var content = this.parentElement.nextElementSibling;
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    this.textContent = 'Read less';
+                } else {
+                    content.style.display = 'none';
+                    this.textContent = 'Read more...';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,58 +180,4 @@
     <a href="/">Home</a>
     <a href="/financialguide.html">Financial Guide</a>
     <a href="/career.html">Career</a>
-    <h1>Financial Guide</h1>
-    <div id="toc_container">
-        <p class="toc_title">Contents</p>
-        <ul class="toc_list">
-          <li><a href="#First_Point_Header">1 First Point Header</a>
-          <ul>
-            <li><a href="#First_Sub_Point_1">1.1 First Sub Point 1</a></li>
-            <li><a href="#First_Sub_Point_2">1.2 First Sub Point 2</a></li>
-          </ul>
-        </li>
-        <li><a href="#Second_Point_Header">2 Second Point Header</a></li>
-        <li><a href="#Third_Point_Header">3 Third Point Header</a></li>
-        </ul>
-    </div>
-    <h2 id="First_Point_Header">First Point Header</h2>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <p>TODO</p>
-    <h2 id="Second_Point_Header">Second Point Header</h2>
-    <h3 id="Third_Point_Header">Third Point Header</h3>
-</body>
-</html>
+-->
