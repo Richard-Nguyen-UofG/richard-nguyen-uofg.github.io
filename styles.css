@@ -49,3 +49,22 @@ p {
 #toc_container li, #toc_container ul, #toc_container ul li{
     list-style: outside none none !important;
 }
+
+.definition {
+    position: relative;
+    /* Required for absolute positioning */
+}
+
+.definition:hover::before {
+    content: "Registered Retirement Savings Plan (RRSP): A tax-advantaged savings account for Canadians to save for retirement.";
+    position: absolute;
+    top: -25px;
+    /* Adjust the position as needed */
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 14px;
+    z-index: 1;
+    /* Ensure it appears above other content */
+}
